@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-col items-center gap-4">
           <p className="text-gray-400 text-sm flex items-center gap-2">
-            Built with <Heart size={14} className="text-pink-500 fill-pink-500" /> using React & Tailwind
+            Built with <Heart size={14} className="text-pink-500 fill-pink-500" /> by Farrukh Mumtaz
           </p>
           <p className="text-gray-600 text-xs">
             © {new Date().getFullYear()} Farrukh Mumtaz. All rights reserved.
