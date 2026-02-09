@@ -55,12 +55,17 @@ const Navbar: React.FC = () => {
 
         {/* Socials & CTA */}
         <div className="hidden lg:flex items-center space-x-4">
-          <a href="https://github.com" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
+          <a href="https://github.com/Farrukhmumtaz" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
             <Github size={20} />
           </a>
-          <a href="https://linkedin.com" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/farrukh-ai-developer/" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
             <Linkedin size={20} />
-          </a>
+          <a
+            href="https://drive.google.com/file/d/1kyLEjWw3S9cAtF32WgQ3dV34HDekRxx0/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-8 py-4 glass border border-white/10 rounded-xl font-bold text-white hover:bg-white/5 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center"
+          />
           <button className="flex items-center space-x-2 px-5 py-2 rounded-full glass border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400 hover:text-white transition-all duration-300 font-medium text-sm">
             <Download size={16} />
             <span>Resume</span>
@@ -94,9 +99,9 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
               <div className="pt-4 flex items-center space-x-4">
-                <a href="https://github.com" className="p-2 glass rounded-full"><Github size={20} /></a>
-                <a href="https://linkedin.com" className="p-2 glass rounded-full"><Linkedin size={20} /></a>
-                <a href="mailto:gmail@gmail.com" className="p-2 glass rounded-full"><Mail size={20} /></a>
+                <a href="https://github.com/Farrukhmumtaz" className="p-2 glass rounded-full"><Github size={20} /></a>
+                <a href="https://www.linkedin.com/in/farrukh-ai-developer/" className="p-2 glass rounded-full"><Linkedin size={20} /></a>
+                <a href="mailto:farrukhmumtaz.ai@gmail.com" className="p-2 glass rounded-full"><Mail size={20} /></a>
               </div>
             </div>
           </motion.div>
