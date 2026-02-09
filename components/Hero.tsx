@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-cyan-400/40 p-2 glass neon-glow">
                 <img 
-                  src="https://picsum.photos/seed/engineer/600" 
+                  src="https://github.com/Farrukhmumtaz/portfolio_website/blob/main/components/headshot_circle1.png" 
                   alt="Farrukh Mumtaz" 
                   className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
                 />
