@@ -40,7 +40,10 @@ const Hero: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
-            <button className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl font-bold text-white shadow-xl hover:shadow-cyan-500/20 transform hover:-translate-y-1 transition-all duration-300 neon-glow">
+            <button 
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl font-bold text-white shadow-xl hover:shadow-cyan-500/20 transform hover:-translate-y-1 transition-all duration-300 neon-glow"
+            >
               View My Work
             </button>
             <button className="w-full sm:w-auto px-8 py-4 glass border border-white/10 rounded-xl font-bold text-white hover:bg-white/5 transform hover:-translate-y-1 transition-all duration-300">
@@ -62,11 +65,15 @@ const Hero: React.FC = () => {
             <div className="absolute inset-4 border-2 border-purple-500/20 rounded-full animate-reverse-spin-slow"></div>
             
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-full h-full rounded-full overflow-hidden border-4 border-cyan-400/40 p-2 glass neon-glow">
+              <div className="w-full h-full rounded-full overflow-hidden border-4 border-cyan-400/40 p-2 glass shadow-[0_0_50px_rgba(0,229,255,0.2)]">
                 <img 
-                  src="https://github.com/Farrukhmumtaz/portfolio_website/blob/main/components/headshot_circle1.png" 
-                  alt="Farrukh Mumtaz" 
-                  className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
+                  src="https://raw.githubusercontent.com/Farrukhmumtaz/portfolio_website/main/components/headshot_circle1.png" 
+                  alt="Farrukh Mumtaz Profile" 
+                  className="w-full h-full object-cover rounded-full transition-all duration-700 hover:scale-105"
+                  onError={(e) => {
+                    // Fallback to a high quality avatar if the raw link fails
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80";
+                  }}
                 />
               </div>
             </div>
@@ -75,21 +82,21 @@ const Hero: React.FC = () => {
             <motion.div 
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 4 }}
-              className="absolute -top-4 -right-4 glass px-4 py-2 rounded-lg border border-cyan-400/30 text-cyan-400 text-sm font-bold flex items-center space-x-2"
+              className="absolute -top-4 -right-4 glass px-4 py-2 rounded-lg border border-cyan-400/30 text-cyan-400 text-sm font-bold flex items-center space-x-2 z-20 shadow-lg"
             >
               <span>PyTorch</span>
             </motion.div>
             <motion.div 
               animate={{ y: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 5 }}
-              className="absolute top-1/2 -left-12 glass px-4 py-2 rounded-lg border border-purple-400/30 text-purple-400 text-sm font-bold flex items-center space-x-2"
+              className="absolute top-1/2 -left-12 glass px-4 py-2 rounded-lg border border-purple-400/30 text-purple-400 text-sm font-bold flex items-center space-x-2 z-20 shadow-lg"
             >
               <span>OpenCV</span>
             </motion.div>
             <motion.div 
               animate={{ x: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 6 }}
-              className="absolute bottom-4 right-10 glass px-4 py-2 rounded-lg border border-pink-400/30 text-pink-400 text-sm font-bold flex items-center space-x-2"
+              className="absolute bottom-4 right-10 glass px-4 py-2 rounded-lg border border-pink-400/30 text-pink-400 text-sm font-bold flex items-center space-x-2 z-20 shadow-lg"
             >
               <span>LLMs</span>
             </motion.div>
@@ -100,9 +107,10 @@ const Hero: React.FC = () => {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500 flex flex-col items-center"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500 flex flex-col items-center cursor-pointer"
+        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
-        <span className="text-xs uppercase tracking-widest mb-2">Scroll Down</span>
+        <span className="text-xs uppercase tracking-widest mb-2">Explore Bio</span>
         <ChevronDown size={20} />
       </motion.div>
 
